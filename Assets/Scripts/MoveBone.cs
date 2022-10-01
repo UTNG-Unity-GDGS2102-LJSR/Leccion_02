@@ -7,7 +7,9 @@ using UnityEngine;
 
 public class MoveBone : MonoBehaviour
 {
+    //Se declara variable para posicionar el hueso que se mostrará al inicio del juego
     public float distance = 21;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +21,7 @@ public class MoveBone : MonoBehaviour
     {
         // Se indica que el hueso se mueve
         if(transform.position.z > distance){
-            Destroy(gameObject);    // El objeto es destruido
+            Destroy(gameObject);// El objeto es destruido (en este caso el hueso)
         }
         transform.Translate(Vector3.forward * Time.deltaTime * 20);
     }
