@@ -8,20 +8,14 @@ using UnityEngine;
 
 public class Colisionador : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void OnTriggerEnter(Collider other)
+    /*Cuando un GameObject (en este caso los objetos como el animal o el hueso) 
+    choca con otro GameObject, es necesario que Unity llame a un OnTriggerEnter
+    para poder generar la destrucción del objeto*/
+    void OnTriggerEnter(Collider other) 
     {    
         Destroy(gameObject); // El objeto es destruido
     }
+    /*Se invoca dicha clase OnTrigger, para la cual se indica que se hará uso 
+      de Collider other, el cual hace referencia a una colisión entre objetos
+    */
 }
